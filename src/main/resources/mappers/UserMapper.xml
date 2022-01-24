@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.somsom.memo.user.dao.UserDAO">
+ 
+ <!-- insert는 resultType 무조건 int라 따로 잡아줄 필요X -->
+ 	<insert id="insertUser" parameterType="map">
+ 		INSERT INTO `user` 
+ 		(
+ 			`loginId`
+ 			, `password`
+ 			, `name`
+ 			, `email`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		)
+ 		VALUES
+ 		(
+ 			#{loginId}
+ 			, #{password}
+ 			, #{name}
+ 			, #{email}
+ 			, now()
+ 			, now()
+ 		)
+ 	
+ 	</insert>
+ </mapper>
