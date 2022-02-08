@@ -27,7 +27,7 @@ public class PostRestController { //API 화면
 	public Map<String, String> create(
 			@RequestParam("subject") String subject,
 			@RequestParam("content") String content,
-			@RequestParam("file") MultipartFile file,
+			@RequestParam(value="file", required=false) MultipartFile file,
 			HttpServletRequest request) {
 		
 		//세션 가져오기
@@ -36,7 +36,7 @@ public class PostRestController { //API 화면
 		//현재 로그인된 user table id(pk)
 		int userId = (Integer)session.getAttribute("userId");
 		
-		int count = postBO.addPost(userId, subject, content);
+		int count = postBO.addPost(userId, subject, content, file);
 		
 		Map<String, String> result = new HashMap<>();
 		

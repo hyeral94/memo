@@ -19,9 +19,9 @@
 	<c:import url ="/WEB-INF/jsp/include/header.jsp" />
 	
 	<section class="d-flex justify-content-center">
-		<div class="w-75">
+		<div class="w-75 my-5">
 			<h1 class="text-center">메모 입력</h1>
-			<div class="d-flex">
+			<div class="d-flex mt-3">
 				<label class="mr-2">제목 : </label>
 				<input type="text" class="form-control col-11" id="titleInput">
 			</div>
@@ -58,7 +58,7 @@
 				var formData = new FormData();
 				formData.append("subject", title);
 				formData.append("content", content);
-				formData.append("file"), $("#fileInput")[0].files[0]);
+				formData.append("file", $("#fileInput")[0].files[0]);
 			
 				$.ajax({
 					type:"post",
@@ -79,17 +79,7 @@
 					}
 					
 				});
-			});
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+			});			
 		});
 	</script>
 </body>
