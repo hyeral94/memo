@@ -2,7 +2,6 @@
 
 #wrap {
 	width:1200px;
-	height:800px;
 	margin:auto;
 }
 
@@ -15,13 +14,11 @@ header {
 
 .content > .join-box {
 	width:400px;
-	height:500px;
 }
 
-.ligin-box {
+.login-box {
 	width:400px;
-	
-	
+
 }
 
 footer {
